@@ -1,25 +1,18 @@
 package reviews.resturants;
 
-import java.sql.Clob;
-
-import javax.persistence.Basic;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 @Entity
 public class Review {
 	@Id
-	@Basic(fetch=FetchType.LAZY)
-	
 	// Many
-	private long id;
+	private Long id;
 	private String title;
 	private String image;
-	private String reviewCategory;
+	private String categoryName;
 	@Lob
 	private String content;
 	private String phoneNumber;
@@ -28,9 +21,8 @@ public class Review {
 	private String hoursOfOperationB;
 	private String hoursOfOperationC;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="rev_id")
-	private Category review;
+	@ManyToOne
+	private Category category;
 
 	public long getId() {
 		return id;
@@ -69,18 +61,18 @@ public class Review {
 	}
 
 	public String getReviewCategory() {
-		return reviewCategory;
+		return categoryName;
 	}
 	
 	private Review() {
 	}
 
-	public Review(long id, String title, String image, String reviewCategory, String content, String phoneNumber,
+	public Review(long id, String title, String image, String categoryName, String content, String phoneNumber,
 			String address, String hoursOfOperationA, String hoursOfOperationB, String hoursOfOperationC) {
 		this.id = id;
 		this.title = title;
 		this.image = image;
-		this.reviewCategory = reviewCategory;
+		this.categoryName = categoryName;
 		this.content = content;
 		this.phoneNumber = phoneNumber;
 		this.address = address;
