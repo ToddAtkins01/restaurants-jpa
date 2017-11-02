@@ -4,12 +4,14 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class ReviewRepository {
 
 	public ReviewRepository() {
+		
 
 		Review restaurant = new Review(0L, "Outback Steakhouse", "/images/OutbackSteakhouse.jpg", "American",
 				"Outback has been one of favorite for years, but a sign on the door may change that. My ribeye was was cooked perfect to the point that the knife wasn't hardly needed. The salads were large and fresh and the bread was fresh. My problem is a new sign saying no firearms allowed. If this is a store by store decision, I guess I will have to find a new favorite restaurant",
