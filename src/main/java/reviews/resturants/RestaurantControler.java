@@ -1,7 +1,5 @@
 package reviews.resturants;
 
-import java.util.Collection;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -13,23 +11,29 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class RestaurantControler {
 
 	@Resource
-	private ReviewRepository reviews;
+	public CategoryRepository categoryRepository;
+
+	@Resource
+	public ReviewRepository reviewRepository;
 
 	@RequestMapping("/restaurant")
 	public String showRestaurant(@RequestParam("id") long id, Model model) {
 
-		model.addAttribute("modelRestaurant", reviews.findOne(id));
+		model.addAttribute("modelRestaurant", reviewRepository.findOne(id));
 		return "restaurant-template";
-
 	}
 
-	@RequestMapping("/allRestaurant")
+	@RequestMapping("/categories")
 	public String showAll(Model model) {
 
-		Collection<Review> restaurants = reviews.findAll();
-
-		model.addAttribute("modelAllRestaurant", restaurants);
-		return "restaurant-all-template";
+		model.addAttribute("modelAllCategories", categories.findAll());
+		return "category-all-template";
 	}
 
+	@RequestMapping("/category")
+	public String showCategory(@RequestParam("id") long id, Model model) {
+
+		model.addAttribute("modelCategory", categories.findOne(id));
+		return "category-template";
+	}
 }
