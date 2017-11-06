@@ -18,22 +18,19 @@ public class RestaurantControler {
 
 	@RequestMapping("/restaurant")
 	public String showRestaurant(@RequestParam("id") long id, Model model) {
-
 		model.addAttribute("modelRestaurant", reviewRepository.findOne(id));
 		return "restaurant-template";
 	}
 
 	@RequestMapping("/categories")
 	public String showAll(Model model) {
-
-		model.addAttribute("modelAllCategories", categories.findAll());
+		model.addAttribute("modelAllCategories", categoryRepository.findAll());
 		return "category-all-template";
 	}
 
 	@RequestMapping("/category")
 	public String showCategory(@RequestParam("id") long id, Model model) {
-
-		model.addAttribute("modelCategory", categories.findOne(id));
+		model.addAttribute("modelCategory", categoryRepository.findOne(id));
 		return "category-template";
 	}
 }

@@ -1,9 +1,9 @@
 package reviews.resturants;
 
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CategoryRepository {
+public interface CategoryRepository extends CrudRepository<Category, Long> {
 
-	
 }
