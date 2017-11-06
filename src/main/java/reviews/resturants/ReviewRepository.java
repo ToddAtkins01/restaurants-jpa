@@ -1,9 +1,10 @@
 package reviews.resturants;
 
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ReviewRepository {
+public interface ReviewRepository extends CrudRepository<Review, Long> {
 
 	
 }
