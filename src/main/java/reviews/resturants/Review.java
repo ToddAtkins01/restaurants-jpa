@@ -1,6 +1,7 @@
 package reviews.resturants;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
@@ -8,11 +9,11 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Review {
 	@Id
+	@GeneratedValue
 	// Many
 	private Long id;
 	private String title;
 	private String image;
-	private String categoryName;
 	@Lob
 	private String content;
 	private String phoneNumber;
@@ -24,7 +25,7 @@ public class Review {
 	@ManyToOne
 	private Category category;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
@@ -60,19 +61,15 @@ public class Review {
 		return title;
 	}
 
-	public String getReviewCategory() {
-		return categoryName;
-	}
 	
 	private Review() {
 	}
 
-	public Review(long id, String title, String image, String categoryName, String content, String phoneNumber,
-			String address, String hoursOfOperationA, String hoursOfOperationB, String hoursOfOperationC) {
-		this.id = id;
+	public Review(Category category, String title, String image, String content, String phoneNumber, String address, String hoursOfOperationA,
+			String hoursOfOperationB, String hoursOfOperationC) {
+		this.category = category;
 		this.title = title;
 		this.image = image;
-		this.categoryName = categoryName;
 		this.content = content;
 		this.phoneNumber = phoneNumber;
 		this.address = address;

@@ -20,11 +20,9 @@
 
 		<!-- h2 -->
 
-		<h2 id="Title-single" th:text="${modelRestaurant.getTitle()}"></h2>
+		<h2 id="Title-single" th:text="${modelRestaurant.title}"></h2>
 
-		<div id="ReviewCategory-single"
-			th:text="${modelRestaurant.getReviewCategory() + ' Restaurant'}"></div>
-		<div id="PhoneNumber-single"
+        <div id="PhoneNumber-single"
 			th:text="'Phone #: ' + ${modelRestaurant.getPhoneNumber()}"></div>
 		<div id="Address-single" th:text="'Address: ' + ${modelRestaurant.getAddress()}"></div>
 		<div id="HOOA-single"
@@ -37,8 +35,8 @@
 		<img id="Image-single" th:src="${modelRestaurant.getImage()}"
 			class="content"></img>
 		<div id="GoHome-single">
-			<a th:href="@{/allRestaurant}"> Go Home </a>
-		</div>
+			<a th:href="@{/categories}"> Go Home </a>
+		</div> -->
 	</div>
 
 </body>
