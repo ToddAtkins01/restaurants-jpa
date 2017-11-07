@@ -17,13 +17,13 @@ public class RestaurantPopulator implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 
-		Category italian = new Category("Italian");
+		Category italian = new Category("Italian","/images/italian.jpg");
 		categoryRepository.save(italian);
-		Category mexican = new Category("Mexican");
+		Category mexican = new Category("Mexican","/images/mexican.png");
 		categoryRepository.save(mexican);
-		Category asian = new Category("Asian");
+		Category asian = new Category("Asian","/images/asian.jpg");
 		categoryRepository.save(asian);
-		Category american = new Category("American");
+		Category american = new Category("American","/images/american.jpg");
 		categoryRepository.save(american);
 
 		Review restaurant = new Review(american, "Outback Steakhouse", "/images/OutbackSteakhouse.jpg", "Outback has been one of favorite for years, but a sign on the door may change that. My ribeye was was cooked perfect to the point that the knife wasn't hardly needed. The salads were large and fresh and the bread was fresh. My problem is a new sign saying no firearms allowed. If this is a store by store decision, I guess I will have to find a new favorite restaurant", "614-755-9926",

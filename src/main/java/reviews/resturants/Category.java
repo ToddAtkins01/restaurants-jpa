@@ -13,6 +13,7 @@ public class Category {
 	@GeneratedValue
 	private Long id;
 	private String name;
+	private String img;
 
 	public List<Review> getReviews() {
 		return reviews;
@@ -30,9 +31,14 @@ public class Category {
 	public String getName() {
 		return name;
 	}
+	
+	public String getImg() {
+		return img;
+	}
 
-	public Category(String name) {
+	public Category(String name, String img) {
 		this.name = name;
+		this.img = img;
 	}
 
 	private Category() {

@@ -31,8 +31,10 @@
 			<h2>
 				<a th:href="@{/category(id=${categories.id})}"
 					th:text="${categories.getName()}"></a>
-
 			</h2>
+			
+			<img th:href="@{/category(id=${categories.id})}"
+					th:img="${categories.img}"></img>
 
 			<!--  	<img class="repeatimage" th:src="${reviews.getImage()}"></img>  -->
 
