@@ -21,10 +21,15 @@
 		<!-- h2 -->
 
 		<h2 id="Title-single" th:text="${modelCategory.name}"></h2>
+<p th:text= "${modelCategory.reviews.size()}"/>
+		<div th:each="review: ${modelCategory.reviews}">
+		
+			<a th:href="@{/restaurant?(id=${review.id})}"
+				th:text="${review.title}"></a>
 
-		<!-- 		<div id="ReviewCategory-single"
-			th:text="${modelRestaurant.getReviewCategory() + ' Restaurant'}"></div>
-		<div id="PhoneNumber-single"
+</div>
+
+			<!-- <div id="PhoneNumber-single"
 			th:text="'Phone #: ' + ${modelRestaurant.getPhoneNumber()}"></div>
 		<div id="Address-single"
 			th:text="'Address: ' + ${modelRestaurant.getAddress()}"></div>
@@ -39,7 +44,7 @@
 			class="content"></img>
 		<div id="GoHome-single">
 			<a th:href="@{/allRestaurant}"> Go Home </a>
-		</div> -->
+		</div>  -->
 	</div>
 
 </body>

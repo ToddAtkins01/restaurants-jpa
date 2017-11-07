@@ -21,16 +21,17 @@ public class Category {
 	@OneToMany(mappedBy = "category")
 	private List<Review> reviews;
 
-	public long getId() {
+	
+	
+	public Long getId() {
 		return id;
 	}
-
+  
 	public String getName() {
 		return name;
 	}
 
-	public Category(long id, String name) {
-		this.id = id;
+	public Category(String name) {
 		this.name = name;
 	}
 
