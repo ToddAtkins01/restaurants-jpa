@@ -14,18 +14,29 @@
 		<h1>WCCI Restaurant Reviews</h1>
 	</header>
 			<!-- h2 -->
-		<h2 id="Title-single" th:text="${modelCategory.name}"></h2>
+		<h2 th:text="${modelCategory.name}"></h2>
+	<span>
 	<div id="cat-container-all">
 
 		<div th:each="review: ${modelCategory.reviews}">
-				<a th:href="@{/restaurant?(id=${review.id})}" th:text="${review.title}"></a>
-				<img class="Image-single" th:src="${review.image}" />
+		 <span>
+				<a th:href="@{/restaurant?(id=${review.id})}">
+					<h3 th:text="${review.title}"></h3>
+					<img class="Image-single" th:src="${review.logo}" />
+				</a>
+		 </span>
+		
 		</div>
+
 	</div>
+	</span>
 
 </body>
 
 <footer>
+		<div>
+			<a th:href="@{/categories}"> Go Home </a>
+		</div> 
 	<p>Created by C&amp;T&amp;M&amp;B &#169;2017 all information and comments are
 		not real and are for demo purpose only</p>
 </footer>

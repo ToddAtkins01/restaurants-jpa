@@ -14,6 +14,7 @@ public class Review {
 	private Long id;
 	private String title;
 	private String image;
+	private String logo;
 	@Lob
 	private String content;
 	private String phoneNumber;
@@ -31,6 +32,10 @@ public class Review {
 
 	public String getImage() {
 		return image;
+	}
+	
+	public String getLogo() {
+		return logo;
 	}
 
 	public String getContent() {
@@ -65,11 +70,12 @@ public class Review {
 	private Review() {
 	}
 
-	public Review(Category category, String title, String image, String content, String phoneNumber, String address, String hoursOfOperationA,
+	public Review(Category category, String title, String image, String logo, String content, String phoneNumber, String address, String hoursOfOperationA,
 			String hoursOfOperationB, String hoursOfOperationC) {
 		this.category = category;
 		this.title = title;
 		this.image = image;
+		this.logo = logo;
 		this.content = content;
 		this.phoneNumber = phoneNumber;
 		this.address = address;

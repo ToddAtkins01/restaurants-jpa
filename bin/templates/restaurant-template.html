@@ -20,7 +20,7 @@
 
 		<!-- h2 -->
 
-		<h2 id="Title-single" th:text="${modelRestaurant.title}"></h2>
+		<h2 th:text="${modelRestaurant.title}"></h2>
 
         <div id="PhoneNumber-single"
 			th:text="'Phone #: ' + ${modelRestaurant.getPhoneNumber()}"></div>
@@ -32,8 +32,7 @@
 		<div id="HOOC-single"
 			th:text="${modelRestaurant.getHoursOfOperationC()}"></div>
 		<div id="Content-single" th:text="${modelRestaurant.getContent()}"></div>
-		<img class="Image-single" th:src="${modelRestaurant.getImage()}"
-			class="content"></img>
+		<img class="Image-review" th:src="${modelRestaurant.getImage()}"></img>
 		<div id="GoHome-single">
 			<a th:href="@{/categories}"> Go Home </a>
 		</div> 
