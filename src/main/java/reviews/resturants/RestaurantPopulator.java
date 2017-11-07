@@ -37,7 +37,7 @@ public class RestaurantPopulator implements CommandLineRunner{
 				"Mon-Thu: 11:00am - 10:00pm", "Fri-Sat: 11:00am - 11:00pm", "Sun: 10:30am - 9:00pm");
 		reviewRepository.save(restaurant1);
 
-		Review restaurant2 = new Review(mexican, "Chile Verde", "/images/ChileVerde.jpg", "atisfy your cravings for authentic New Mexican cuisine right here at Chile Verde Cafe. Our food is a unique fusion of Native American and Latino cultures, featuring the most exotic flavors that will certainly delight any palate.", "614-442-6630",
+		Review restaurant2 = new Review(mexican, "Chile Verde", "/images/ChileVerde.jpg", "Satisfy your cravings for authentic New Mexican cuisine right here at Chile Verde Cafe. Our food is a unique fusion of Native American and Latino cultures, featuring the most exotic flavors that will certainly delight any palate.", "614-442-6630",
 				"4852 Sawmill Rd, Columbus, OH 43235",
 				"Mon-Thu: 11:00am – 9:00pm", "Fri-Sat: 11:00am – 10:00pm", "Sun: Closed");
 		reviewRepository.save(restaurant2);
