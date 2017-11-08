@@ -15,6 +15,12 @@ public class RestaurantControler {
 
 	@Resource
 	public ReviewRepository reviewRepository;
+	
+	@RequestMapping("/home")
+	public String showHome(Model model) {
+		model.addAttribute("modelHome", null);
+		return "home";
+	}
 
 	@RequestMapping("/restaurant")
 	public String showRestaurant(@RequestParam("id") long id, Model model) {

@@ -52,7 +52,7 @@ public class RestaurantPopulator implements CommandLineRunner{
 				"Mon-Thu: 11:30am - 9:30pm", "Fri-Sat: 11:30am - 10:00pm", "Sun: 11:00am - 9:00pm");
 		reviewRepository.save(restaurant4);
 
-		Review restaurant5 = new Review(italian, "Buci Di Bepo", "/images/BuciDiBepo.jpg", "/images/Logos/buca-logo.jpg", "The restaurant decoration is fabulous.. They walk you through the kitchen before seating, I recommend picking one entree for two because the portions are HUGE there is no way that you can have a 3 course meal with these portions. I would definitely go back to this restaurant when I am craving for Italian and very hungry!", "614-621-3287",
+		Review restaurant5 = new Review(italian, "Buca Di Beppo", "/images/BuciDiBepo.jpg", "/images/Logos/buca-logo.jpg", "The restaurant decoration is fabulous. They walk you through the kitchen before seating, I recommend picking one entree for two because the portions are HUGE there is no way that you can have a 3 course meal with these portions. I would definitely go back to this restaurant when I am craving for Italian and very hungry!", "614-621-3287",
 				"343 N Front St Columbus, Ohio 43215",
 				" Mon-Thu: 11:00am - 10:00pm", "Fri-Sat: 11:00am - 11:00pm", "Sun: 11:00am - 9:00pm");
 		reviewRepository.save(restaurant5);

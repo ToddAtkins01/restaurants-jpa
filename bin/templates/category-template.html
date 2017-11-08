@@ -8,37 +8,34 @@
 </head>
 
 <body>
-
 	<!-- Header -->
 	<header>
 		<h1>WCCI Restaurant Reviews</h1>
 	</header>
 			<!-- h2 -->
-		<h2 th:text="${modelCategory.name}"></h2>
+	<h2 th:text="${modelCategory.name}"></h2>
+	
 	<span>
-	<div id="cat-container-all">
-
-		<div th:each="review: ${modelCategory.reviews}">
-		 <span>
-				<a th:href="@{/restaurant?(id=${review.id})}">
-					<h3 th:text="${review.title}"></h3>
-					<img class="Image-single" th:src="${review.logo}" />
-				</a>
-		 </span>
-		
+		<div class="cat-container-all">
+			<div th:each="review: ${modelCategory.reviews}">
+				<span>
+					<a th:href="@{/restaurant?(id=${review.id})}">
+						<h3 class="title" th:text="${review.title}"></h3>
+						<img class="Image-single" th:src="${review.logo}" />
+					</a>
+		 		</span>
+			</div>
 		</div>
-
-	</div>
 	</span>
-
 </body>
 
 <footer>
-		<div>
-			<a th:href="@{/categories}"> Go Home </a>
-		</div> 
+	<div>
+		<a th:href="@{/home}"> Go Home </a>
+	</div> 
 	<p>Created by C&amp;T&amp;M&amp;B &#169;2017 all information and comments are
-		not real and are for demo purpose only</p>
+		not real and are for demo purpose only
+	</p>
 </footer>
 
 

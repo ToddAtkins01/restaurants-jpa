@@ -14,7 +14,7 @@
 		<h1>WCCI Restaurant Reviews</h1>
 	</header>
 
-	<div id="container-single">
+	<div class="container-single">
 
 
 
@@ -22,19 +22,19 @@
 
 		<h2 th:text="${modelRestaurant.title}"></h2>
 
-        <div id="PhoneNumber-single"
+        <div class="PhoneNumber-single"
 			th:text="'Phone #: ' + ${modelRestaurant.getPhoneNumber()}"></div>
-		<div id="Address-single" th:text="'Address: ' + ${modelRestaurant.getAddress()}"></div>
-		<div id="HOOA-single"
+		<div class="Address-single" th:text="'Address: ' + ${modelRestaurant.getAddress()}"></div>
+		<div class="HOOA-single"
 			th:text="${modelRestaurant.getHoursOfOperationA()}"></div>
-		<div id="HOOB-single"
+		<div class="HOOB-single"
 			th:text="${modelRestaurant.getHoursOfOperationB()}"></div>
-		<div id="HOOC-single"
+		<div class="HOOC-single"
 			th:text="${modelRestaurant.getHoursOfOperationC()}"></div>
-		<div id="Content-single" th:text="${modelRestaurant.getContent()}"></div>
+		<div class="Content-single" th:text="${modelRestaurant.getContent()}"></div>
 		<img class="Image-review" th:src="${modelRestaurant.getImage()}"></img>
-		<div id="GoHome-single">
-			<a th:href="@{/categories}"> Go Home </a>
+		<div class="GoHome-single">
+			<a th:href="@{/home}"> Go Home </a>
 		</div> 
 	</div>
 

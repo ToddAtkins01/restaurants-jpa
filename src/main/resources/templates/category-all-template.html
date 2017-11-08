@@ -15,21 +15,15 @@
 </head>
 
 <body>
-
-	<!-- Header -->
-
 	<header>
-
 		<h1>WCCI Restaurant Reviews</h1>
-
 	</header>
-
-	<div id="container-all">
-
+	<h2 class="title">Categories</h2>
+	<div class="container-all">
 		<div class="repeatreview" th:each="categories: ${modelAllCategories}">
 			<span>
 				<a  th:href="@{/category(id=${categories.id})}">
-					<h2	th:text="${categories.getName()}"></h2>
+					<h2 class="title" th:text="${categories.getName()}"></h2>
 					<img class="Image-single" th:src="${categories.getImg()}" /> 
 				</a> 
 			</span>
@@ -39,9 +33,12 @@
 </body>
 
 <footer>
-
+	<div>
+		<a th:href="@{/home}"> Go Home </a>
+	</div>
 	<p>Created by C&amp;T&amp;M&amp;B &#169;2017 all information and
-		comments are not real and are for demo purpose only</p>
+		comments are not real and are for demo purpose only
+	</p>
 </footer>
 
 </html>
