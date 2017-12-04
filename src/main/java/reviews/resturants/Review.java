@@ -22,7 +22,7 @@ public class Review {
 	private String hoursOfOperationA;
 	private String hoursOfOperationB;
 	private String hoursOfOperationC;
-	
+
 	@ManyToOne
 	private Category category;
 
@@ -33,7 +33,7 @@ public class Review {
 	public String getImage() {
 		return image;
 	}
-	
+
 	public String getLogo() {
 		return logo;
 	}
@@ -66,12 +66,11 @@ public class Review {
 		return title;
 	}
 
-	
 	private Review() {
 	}
 
-	public Review(Category category, String title, String image, String logo, String content, String phoneNumber, String address, String hoursOfOperationA,
-			String hoursOfOperationB, String hoursOfOperationC) {
+	public Review(Category category, String title, String image, String logo, String content, String phoneNumber,
+			String address, String hoursOfOperationA, String hoursOfOperationB, String hoursOfOperationC) {
 		this.category = category;
 		this.title = title;
 		this.image = image;
